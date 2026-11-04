@@ -1,14 +1,15 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { supabase } from "../lib/supabase";
+import { requireSupabase } from "../lib/supabase";
 
 async function startGoogleLogin(setError, setBusy) {
   setError("");
   setBusy(true);
 
   try {
-    const { error } = await supabase.auth.signInWithOAuth({
+    const client = requireSupabase();
+    const { error } = await client.auth.signInWithOAuth({
       provider: "google",
       options: {
         redirectTo: `${window.location.origin}/account`,
@@ -196,7 +197,8 @@ export function ForgotPassword() {
     setNote("");
 
     try {
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      const client = requireSupabase();
+      const { error } = await client.auth.resetPasswordForEmail(email, {
         redirectTo: window.location.origin + "/account/password",
       });
 

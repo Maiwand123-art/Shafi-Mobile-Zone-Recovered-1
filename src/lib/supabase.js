@@ -23,9 +23,11 @@ export const supabase = isSupabaseConfigured
 export function getSupabase() {
   if (!supabase) {
     throw new Error(
-      "Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel Environment Variables, then redeploy."
+      "Supabase is not configured. Check Vercel Environment Variables."
     );
   }
 
   return supabase;
 }
+
+export const requireSupabase = getSupabase;

@@ -1,0 +1,199 @@
+SHAFI MOBILE ZONE - PROJECT AUDIT
+
+===== PROJECT FILES =====
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\index.css
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\main.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\styles.css
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\styles.css.before-capital-fix
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\Layout.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\PhoneCard.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\ProtectedRoute.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\context\AuthContext.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\data\pages.js
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\solarDate.js
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\supabase.js
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.backup
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-capital
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-dashboard-fix-20261104-112114
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-dashboard-upgrade
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-imei-20261104-113117
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-loans-actions
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-mobile-actions
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-payment-profit
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-payment-profit-final
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-sales-actions
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-sales-edit-delete
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.before-stat-20261104-111840
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx.recovery-20261104-111223
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Auth.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Generic.jsx
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx
+
+===== PACKAGE CONFIGURATION =====
+{
+  "name": "shafi-mobile-zone",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.0",
+    "framer-motion": "^12.23.12",
+    "jalaali-js": "^2.0.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.8.2",
+    "recharts": "^2.15.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@vitejs/plugin-react": "^5.0.2",
+    "tailwindcss": "^4.1.13",
+    "vite": "^7.1.5"
+  }
+}
+
+===== REACT COMPONENTS AND ROUTES =====
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\Layout.jsx:16: export default function Layout() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\PhoneCard.jsx:4: export default function PhoneCard({ phone }) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\components\ProtectedRoute.jsx:3: export default function ProtectedRoute({ children, admin = false }) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\context\AuthContext.jsx:6: export function AuthProvider({ children }) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\solarDate.js:3: export function formatSolarDate(value) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\solarDate.js:30: export function formatSolarDateTime(value) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\solarDate.js:43: export function getTodaySolar() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\lib\solarDate.js:47: export function solarToGregorian(value) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:13: export function Account() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:105: export function AccountList({ kind }) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:171: export function Profile() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:62: export function AdminHome() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:348: export function AdminMobiles() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:504: export function MobileEditor({ edit = false }) {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:682: export function AdminRequests() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:741: export function AdminMessages() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:773: export function AdminSales() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:951: export function AdminSoldMobiles() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1177: export function AdminLoans() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Auth.jsx:46: export function Login() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Auth.jsx:114: export function Signup() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Auth.jsx:186: export function ForgotPassword() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Generic.jsx:3: export default function Generic() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:15: export function Home() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:133: export function Mobiles() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:187: export function PhoneDetails() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:1: import { Routes, Route } from "react-router-dom";
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:3: import ProtectedRoute from "./components/ProtectedRoute";
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:33: export default function App() {
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:38: <Routes>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:42: <Route path="/mobiles" element={<Mobiles />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:43: <Route path="/mobiles/:id" element={<PhoneDetails />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:46: <Route path="/login" element={<Login />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:47: <Route path="/signup" element={<Signup />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:48: <Route path="/forgot-password" element={<ForgotPassword />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:54: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:56: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:63: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:65: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:72: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:74: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:81: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:83: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:90: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:92: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:99: <ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:101: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:109: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:111: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:119: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:121: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:128: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:130: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:137: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:139: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:147: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:149: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:157: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:159: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:167: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:169: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:177: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:179: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:186: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:188: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:195: <ProtectedRoute admin>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:197: </ProtectedRoute>
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:230: <Route path="*" element={<Generic />} />
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\App.jsx:232: </Routes>
+
+===== SUPABASE TABLE QUERIES =====
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\context\AuthContext.jsx:17: .from("profiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:20: .from("mobile_requests")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:128: .from(table)
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Account.jsx:181: .from("profiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:97: supabase.from("mobiles").select("id,price,stock_quantity,is_active"),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:98: supabase.from("sales").select("id,mobile_id,total_amount,purchase_price"),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:99: supabase.from("mobile_requests").select("*", { count: "exact", head: true }),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:100: supabase.from("profiles").select("*", { count: "exact", head: true }).eq("role", "customer"),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:101: supabase.from("loans").select("id,loan_amount,paid_amount,remaining_amount"),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:102: supabase.from("store_capital").select("id,amount").order("id", { ascending: false }).limit(1).maybeSingle(),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:103: supabase.from("loan_payments").select("loan_id,amount"),
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:209: .from("store_capital")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:216: .from("store_capital")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:355: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:376: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:531: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:554: .from("mobile-images")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:557: image_url = supabase.storage.from("mobile-images").getPublicUrl(path)
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:568: ? await supabase.from("mobiles").update(payload).eq("id", id)
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:569: : await supabase.from("mobiles").insert(payload);
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:687: .from("mobile_requests")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:697: .from("mobile_requests")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:745: .from("messages")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:782: .from("sales")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:819: .from("sales")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:962: .from("sales")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:985: .from("sales")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1209: .from("loans")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1233: .from("loan_payments")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1268: .from("loan_payments")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1283: .from("loans")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1348: .from("loans")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1369: const { error } = await supabase.from("loans").insert(payload);
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1425: .from("loan_payments")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Admin.jsx:1440: .from("loans")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:21: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:28: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:140: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:196: .from("mobiles")
+C:\Users\Maiwand Khan\Desktop\j\Shafi-Mobile-Zone\src\pages\Store.jsx:211: .from("mobile_requests")
+
+===== GIT STATUS =====
+fatal: not a git repository (or any of the parent directories): .git
+fatal: not a git repository (or any of the parent directories): .git
+
+===== BUILD TEST =====
+
+> shafi-mobile-zone@1.0.0 build
+> vite build
+
+[36mvite v7.3.7 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mG£ô[39m 1647 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                 [39m[1m[2m  0.55 kB[22m[1m[22m[2m Göé gzip:   0.34 kB[22m
+[2mdist/[22m[35massets/index-Kj3XOM9p.css  [39m[1m[2m 23.46 kB[22m[1m[22m[2m Göé gzip:   6.05 kB[22m
+[2mdist/[22m[36massets/index-DYq57wwA.js   [39m[1m[33m553.34 kB[39m[22m[2m Göé gzip: 159.64 kB[22m
+[33m
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+[32mG£ô built in 4.09s[39m

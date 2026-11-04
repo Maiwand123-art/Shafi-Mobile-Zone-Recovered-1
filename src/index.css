@@ -1,0 +1,113 @@
+﻿.page-back-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  pointer-events: none;
+}
+
+.back-button {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(20, 20, 25, 0.72);
+  color: white;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateX(-3px);
+  background: rgba(180, 30, 45, 0.85);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.back-button:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 768px) {
+  .page-back-container {
+    padding: 10px 14px;
+  }
+
+  .back-button {
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-back-container {
+    padding: 8px 10px;
+  }
+
+  .back-button {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
+.page-back-container {
+  position: fixed !important;
+  top: 85px;
+  left: 20px;
+  z-index: 99999;
+  width: auto;
+  padding: 0;
+  pointer-events: none;
+}
+
+.back-button {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  background: rgba(20,20,25,0.82);
+  color: white;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: rgba(180,30,45,0.9);
+}
+
+@media (max-width: 768px) {
+  .page-back-container {
+    top: 76px;
+    left: 12px;
+  }
+
+  .back-button {
+    min-height: 42px;
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-back-container {
+    top: 70px;
+    left: 10px;
+  }
+}

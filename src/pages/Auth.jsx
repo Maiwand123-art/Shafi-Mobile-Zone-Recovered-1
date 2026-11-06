@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { requireSupabase, supabase } from "../lib/supabase";
@@ -27,7 +27,7 @@ function GoogleButton({ busy, onClick }) {
   return (
     <button
       type="button"
-      className="button"
+      className="button auth-action"
       onClick={onClick}
       disabled={busy}
     >
@@ -103,7 +103,7 @@ export function Login() {
 
         {error && <p className="error">{error}</p>}
 
-        <button className="button" disabled={busy || googleBusy}>
+        <button className="button auth-action" disabled={busy || googleBusy}>
           {busy ? "Signing in..." : "Sign in"}
         </button>
 
@@ -179,7 +179,7 @@ export function Signup() {
         {error && <p className="error">{error}</p>}
         {note && <p className="success">{note}</p>}
 
-        <button className="button" disabled={busy || googleBusy}>
+        <button className="button auth-action" disabled={busy || googleBusy}>
           {busy ? "Creating..." : "Create account"}
         </button>
 
@@ -233,7 +233,7 @@ export function ForgotPassword() {
         {error && <p className="error">{error}</p>}
         {note && <p className="success">{note}</p>}
 
-        <button className="button" disabled={busy}>
+        <button className="button auth-action" disabled={busy}>
           {busy ? "Sending..." : "Send reset link"}
         </button>
       </form>
@@ -268,5 +268,6 @@ function AuthFrame({ title, subtitle, children }) {
     </section>
   );
 }
+
 
 

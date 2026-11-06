@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
+﻿import { Link, NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
 import {
   Menu, X, Smartphone, Search, UserRound, LogOut, LayoutDashboard,
   ArrowLeft, Sun, Moon, Monitor, Plus, ShoppingCart, History,
@@ -26,6 +26,9 @@ const themeOptions = [
   { value: "dark", label: "Dark", icon: Moon },
   { value: "light", label: "Light", icon: Sun },
   { value: "midnight", label: "Midnight", icon: Monitor },
+  { value: "ocean", label: "Ocean", icon: Monitor },
+  { value: "emerald", label: "Emerald", icon: Monitor },
+  { value: "sunset", label: "Sunset", icon: Sun },
 ];
 
 export default function Layout() {
@@ -92,7 +95,10 @@ export default function Layout() {
               <button className="icon-button" onClick={logout} title="Sign out" aria-label="Sign out"><LogOut size={18} /></button>
             </>
           ) : (
-            <Link className="button button-small" to="/login">Sign in</Link>
+            <div className="auth-nav-actions">
+              <Link className="button button-small button-ghost" to="/login">Sign in</Link>
+              <Link className="button button-small" to="/signup">Sign up</Link>
+            </div>
           )}
           {!isAdminArea && <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Toggle menu">{open ? <X /> : <Menu />}</button>}
         </div>
@@ -113,15 +119,15 @@ export default function Layout() {
             <div className="sidebar-store-card glass">
               <span className="sidebar-store-icon"><Globe size={17} /></span>
               <b>Shafi Mobile Zone</b>
-              <small>Kote Sangi · Kabul</small>
-              <a href="https://wa.me/93782550555" target="_blank" rel="noreferrer">Contact support ↗</a>
+              <small>Kote Sangi Â· Kabul</small>
+              <a href="https://wa.me/93782550555" target="_blank" rel="noreferrer">Contact support â†—</a>
             </div>
           </aside>
           <main className="admin-content">
             <div className="admin-mobile-bar">
               <button className="icon-button" onClick={() => setOpen(!open)} aria-label="Open admin navigation"><Menu size={18} /></button>
               <span>Admin workspace</span>
-              <span className="admin-online-dot">● Online</span>
+              <span className="admin-online-dot">â— Online</span>
             </div>
             <Outlet />
           </main>
@@ -148,9 +154,10 @@ export default function Layout() {
             <Link to="/about">About</Link><Link to="/contact">Contact</Link>
             <Link to="/privacy">Privacy</Link><Link to="/terms">Terms</Link>
           </div>
-          <small>© {new Date().getFullYear()} Shafi Mobile Zone. All rights reserved.</small>
+          <small>Â© {new Date().getFullYear()} Shafi Mobile Zone. All rights reserved.</small>
         </footer>
       )}
     </div>
   );
 }
+

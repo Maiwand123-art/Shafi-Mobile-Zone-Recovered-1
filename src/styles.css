@@ -1379,3 +1379,446 @@ body {
 .app-shell[data-theme="midnight"] .brand b,
 .app-shell[data-theme="midnight"] .text-link,
 .app-shell[data-theme="midnight"] .detail-price { color: #83b5ff; }
+
+/* =========================================================
+   SHAFI MOBILE ZONE — RESPONSIVE PREMIUM UI UPGRADE
+========================================================= */
+
+.app-shell {
+  --ui-radius: 20px;
+  --ui-shadow: 0 18px 50px rgba(0,0,0,.16);
+  color: var(--text-main, #f5f5f8);
+  min-height: 100vh;
+}
+
+.app-shell .glass,
+.app-shell .panel,
+.app-shell .stat-card,
+.app-shell .dash-tile {
+  border-color: var(--line, rgba(255,255,255,.1));
+}
+
+/* Product cards: image stays above, all details stay below */
+.phone-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  isolation: isolate;
+}
+
+.phone-card .phone-image {
+  display: grid;
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  height: clamp(175px, 19vw, 230px);
+  min-height: 175px;
+  overflow: hidden;
+  place-items: center;
+  background: var(--surface-soft, rgba(255,255,255,.04));
+  border-bottom: 1px solid var(--line, rgba(255,255,255,.1));
+}
+
+.phone-card .phone-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 16px;
+}
+
+.phone-card .phone-info {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  padding: 16px;
+  background: var(--surface-raised, rgba(24,24,34,.45));
+}
+
+.phone-title-link {
+  display: block;
+  min-height: 42px;
+  color: inherit;
+}
+
+.phone-title-link h3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.phone-meta {
+  margin-bottom: 4px;
+}
+
+.phone-card .spec-row {
+  flex-wrap: wrap;
+  row-gap: 8px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.phone-card .phone-bottom {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.phone-card .phone-bottom strong {
+  overflow-wrap: anywhere;
+}
+
+.phone-card .ribbon {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.phone-grid {
+  align-items: stretch;
+}
+
+.phone-image img,
+.detail-image img {
+  object-fit: contain;
+}
+
+.phone-image img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smaller authentication actions */
+.auth-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.topbar .button-small {
+  min-height: 34px;
+  padding: 7px 12px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.auth-action {
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.auth-card {
+  width: min(100% - 28px, 460px);
+  border-radius: 24px;
+}
+
+/* Public information pages */
+.page-description {
+  max-width: 760px;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.business-info {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+  padding: clamp(20px, 4vw, 32px);
+  border-radius: 22px;
+}
+
+.business-info h2 {
+  margin: 0;
+}
+
+.business-info p {
+  line-height: 1.8;
+}
+
+.business-contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line, rgba(255,255,255,.1));
+}
+
+.contact-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+/* Admin dashboard workspace */
+.admin-content {
+  min-width: 0;
+}
+
+.admin-content .section {
+  padding: clamp(20px, 3vw, 42px);
+}
+
+.admin-heading {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.admin-heading h1 {
+  letter-spacing: -.045em;
+}
+
+.dashboard-tiles,
+.stats-grid {
+  gap: 16px;
+}
+
+.dash-tile,
+.stat-card {
+  min-width: 0;
+  border: 1px solid var(--line, rgba(255,255,255,.1));
+  border-radius: 19px;
+  background: var(--surface-raised, rgba(24,24,34,.75));
+  box-shadow: var(--ui-shadow);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.dash-tile:hover,
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent, #ff536d);
+}
+
+.admin-content .panel {
+  border-radius: 20px;
+  padding: clamp(16px, 2.5vw, 26px);
+}
+
+.admin-content input,
+.admin-content select,
+.admin-content textarea,
+.auth-card input {
+  max-width: 100%;
+  border-color: var(--line, rgba(255,255,255,.14));
+  border-radius: 11px;
+}
+
+.admin-content .quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-sidebar {
+  border-right: 1px solid var(--line, rgba(255,255,255,.1));
+}
+
+/* Additional theme palettes */
+.app-shell[data-theme="ocean"] {
+  --surface: #071521;
+  --surface-raised: rgba(13,37,54,.84);
+  --surface-soft: rgba(52,176,210,.09);
+  --text-main: #eafaff;
+  --text-muted: #9ab9c8;
+  --line: rgba(91,199,224,.17);
+  --accent: #42c6e5;
+  color: var(--text-main);
+  background: radial-gradient(ellipse at 80% 0%, rgba(16,135,174,.28), transparent 42%), var(--surface);
+}
+
+.app-shell[data-theme="emerald"] {
+  --surface: #081710;
+  --surface-raised: rgba(17,42,29,.84);
+  --surface-soft: rgba(65,190,120,.08);
+  --text-main: #effff4;
+  --text-muted: #a0c3aa;
+  --line: rgba(112,213,151,.16);
+  --accent: #54d68a;
+  color: var(--text-main);
+  background: radial-gradient(ellipse at 80% 0%, rgba(24,130,73,.25), transparent 42%), var(--surface);
+}
+
+.app-shell[data-theme="sunset"] {
+  --surface: #1b1014;
+  --surface-raised: rgba(53,28,32,.84);
+  --surface-soft: rgba(255,139,94,.08);
+  --text-main: #fff4ef;
+  --text-muted: #d0aaa0;
+  --line: rgba(255,163,130,.17);
+  --accent: #ff956d;
+  color: var(--text-main);
+  background: radial-gradient(ellipse at 80% 0%, rgba(188,67,60,.28), transparent 42%), var(--surface);
+}
+
+.app-shell[data-theme="ocean"] .topbar,
+.app-shell[data-theme="ocean"] .glass,
+.app-shell[data-theme="ocean"] .panel,
+.app-shell[data-theme="ocean"] .stat-card,
+.app-shell[data-theme="ocean"] .dash-tile,
+.app-shell[data-theme="emerald"] .topbar,
+.app-shell[data-theme="emerald"] .glass,
+.app-shell[data-theme="emerald"] .panel,
+.app-shell[data-theme="emerald"] .stat-card,
+.app-shell[data-theme="emerald"] .dash-tile,
+.app-shell[data-theme="sunset"] .topbar,
+.app-shell[data-theme="sunset"] .glass,
+.app-shell[data-theme="sunset"] .panel,
+.app-shell[data-theme="sunset"] .stat-card,
+.app-shell[data-theme="sunset"] .dash-tile {
+  background-color: var(--surface-raised);
+  color: var(--text-main);
+  border-color: var(--line);
+}
+
+/* Light mode readability across the entire website */
+.app-shell[data-theme="light"] {
+  color: #171b28;
+}
+
+.app-shell[data-theme="light"] .phone-info,
+.app-shell[data-theme="light"] .phone-card,
+.app-shell[data-theme="light"] .business-info,
+.app-shell[data-theme="light"] .contact-details {
+  color: #171b28;
+}
+
+.app-shell[data-theme="light"] .phone-title-link,
+.app-shell[data-theme="light"] .phone-info h3 {
+  color: #171b28;
+}
+
+.app-shell[data-theme="light"] .icon-button,
+.app-shell[data-theme="light"] .menu-button {
+  color: #252b3a;
+  border-color: rgba(30,43,67,.15);
+  background: rgba(30,43,67,.05);
+}
+
+.app-shell[data-theme="light"] .admin-nav-link {
+  color: #454d60;
+}
+
+.app-shell[data-theme="light"] .admin-nav-link.active {
+  color: #a91e3b;
+  background: rgba(189,40,69,.09);
+}
+
+.app-shell[data-theme="light"] .footer {
+  color: #171b28;
+}
+
+/* Tablet and mobile refinements */
+@media (max-width: 900px) {
+  .phone-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-content .section {
+    padding: 22px 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  .auth-nav-actions {
+    gap: 5px;
+  }
+
+  .topbar .button-small {
+    min-height: 32px;
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  .phone-card .phone-image {
+    height: 165px;
+    min-height: 165px;
+  }
+
+  .phone-card .phone-info {
+    padding: 12px;
+  }
+
+  .phone-card .phone-bottom strong {
+    font-size: 14px;
+  }
+
+  .business-contact-row {
+    align-items: flex-start;
+  }
+
+  .admin-content .section {
+    padding: 18px 12px;
+  }
+
+  .admin-heading .quick-links {
+    width: 100%;
+  }
+
+  .admin-heading .quick-links .button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 390px) {
+  .phone-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .phone-card .phone-image {
+    height: 140px;
+    min-height: 140px;
+  }
+
+  .phone-card .phone-image img {
+    padding: 9px;
+  }
+
+  .phone-card .phone-info {
+    padding: 10px;
+  }
+
+  .phone-card .spec-row {
+    font-size: 8px;
+  }
+
+  .phone-card .phone-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .auth-nav-actions {
+    gap: 4px;
+  }
+
+  .topbar .button-small {
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-card,
+  .dash-tile,
+  .stat-card,
+  .button {
+    transition: none !important;
+  }
+}

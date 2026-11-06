@@ -1,42 +1,55 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { BatteryFull, HardDrive, Star } from "lucide-react";
 
 export default function PhoneCard({ phone }) {
   return (
     <article className="phone-card glass">
-      <Link to={`/mobiles/${phone.id}`} className="phone-image">
+      <Link
+        to={`/mobiles/${phone.id}`}
+        className="phone-image"
+        aria-label={`View ${phone.name}`}
+      >
         {phone.image_url ? (
-          <img src={phone.image_url} alt={phone.name} />
+          <img
+            src={phone.image_url}
+            alt={phone.name || "Mobile phone"}
+            loading="lazy"
+          />
         ) : (
           <div className="image-placeholder">
-            {" "}
             <span>SMZ</span>
             <small>PHONE IMAGE</small>
           </div>
         )}
         {phone.is_featured && <span className="ribbon">FEATURED</span>}
       </Link>
+
       <div className="phone-info">
-        <div className="muted tiny">
+        <div className="muted tiny phone-meta">
           {phone.brand || "Mobile"} · {phone.condition || "New"}
         </div>
-        <Link to={`/mobiles/${phone.id}`}>
-          <h3>{phone.name}</h3>
+
+        <Link to={`/mobiles/${phone.id}`} className="phone-title-link">
+          <h3>{phone.name || "Mobile phone"}</h3>
         </Link>
+
         <div className="spec-row">
           <span>
-            <HardDrive size={13} /> {phone.ram || "—"} / {phone.storage || "—"}
+            <HardDrive size={13} />
+            {phone.ram || "—"} / {phone.storage || "—"}
           </span>
           <span>
-            <BatteryFull size={13} /> {phone.battery || "—"}
+            <BatteryFull size={13} />
+            {phone.battery || "—"}
           </span>
         </div>
+
         <div className="phone-bottom">
           <strong>
             {Number(phone.price || 0).toLocaleString()} <small>AFN</small>
           </strong>
           <span className="rating">
-            <Star size={13} fill="currentColor" />{" "}
+            <Star size={13} fill="currentColor" />
             {phone.average_rating
               ? Number(phone.average_rating).toFixed(1)
               : "New"}

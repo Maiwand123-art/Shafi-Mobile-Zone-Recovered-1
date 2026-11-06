@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+﻿import { Link, useLocation } from "react-router-dom";
 import { allPages } from "../data/pages";
 export default function Generic() {
   const loc = useLocation();
@@ -8,9 +8,11 @@ export default function Generic() {
   ];
   const descriptions = {
     "/about":
-      "Shafi Mobile Zone helps customers discover mobile phones with clear specifications and direct support from our team.",
+      "Shafi Mobile Zone is a customer-focused mobile phone store based in Kote Sangi, Kabul. We help customers explore smartphones with clear specifications, transparent AFN pricing and personal assistance. Our goal is to make choosing a phone simple, informed and comfortable, whether you are looking for a new device or a carefully selected used phone.",
     "/contact":
-      "Send a message to our team and we’ll help with device availability, specifications and requests.",
+      "Visit or contact Shafi Mobile Zone for mobile availability, product details, pricing and customer support. Our team can help you compare devices and answer questions before you make a decision.",
+    "/location":
+      "Find Shafi Mobile Zone at Fazli Market, Shop No. 80, Kote Sangi, Kabul. Contact us before visiting if you need help confirming availability.",
     "/faq":
       "Browse common questions about mobile listings, requests, availability and contacting the store.",
     "/privacy":
@@ -19,9 +21,7 @@ export default function Generic() {
       "Use this website respectfully. Listings and availability are subject to confirmation by the Shafi Mobile Zone team.",
     "/warranty":
       "Warranty and after-sales terms are confirmed individually with the store for each device.",
-    "/location":
-      "Contact the store team for current location and opening information.",
-  };
+};
   return (
     <section className="section page-section narrow">
       <div className="eyebrow">SHAFI MOBILE ZONE</div>
@@ -34,14 +34,11 @@ export default function Generic() {
         <ContactForm />
       ) : (
         <div className="glass info-panel">
-          <h3>How can we help?</h3>
-          <p>
-            Explore the current mobile collection or sign in to send a request
-            directly to our team.
-          </p>
-          <Link to="/mobiles" className="button">
-            Browse mobiles
-          </Link>
+          <h3>Shafi Mobile Zone</h3>
+          <p>Kabul, Kote Sangi, Fazli Market, Shop No. 80</p>
+          <p><b>Phone:</b> <a className="text-link" href="tel:0782550555">0782550555</a></p>
+          <p><b>WhatsApp:</b> <a className="text-link" href="https://wa.me/93782550555" target="_blank" rel="noreferrer">Chat with our team</a></p>
+          <Link to="/mobiles" className="button">Browse mobiles</Link>
         </div>
       )}
     </section>
@@ -74,3 +71,4 @@ function ContactForm() {
     </form>
   );
 }
+

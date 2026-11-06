@@ -1,7 +1,7 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { requireSupabase } from "../lib/supabase";
+import { requireSupabase, supabase } from "../lib/supabase";
 
 async function startGoogleLogin(setError, setBusy) {
   setError("");
@@ -60,8 +60,18 @@ export function Login() {
     setError("");
 
     try {
-      await signIn(email, password);
-      nav("/account");
+      const authResult = await signIn(email, password);
+      const signedInUser = authResult?.user || authResult?.session?.user;
+      if (signedInUser && supabase) {
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", signedInUser.id)
+          .maybeSingle();
+        nav(profile?.role === "admin" ? "/admin" : "/account", { replace: true });
+      } else {
+        nav("/account", { replace: true });
+      }
     } catch (x) {
       setError(x.message);
     } finally {

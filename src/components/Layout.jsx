@@ -1,4 +1,4 @@
-﻿import { Link, NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate, useLocation } from "react-router-dom";
 import {
   Menu, X, Smartphone, Search, UserRound, LogOut, LayoutDashboard,
   ArrowLeft, Sun, Moon, Monitor, Plus, ShoppingCart, History,
@@ -42,6 +42,21 @@ export default function Layout() {
   const location = useLocation();
   const isAdminArea = location.pathname.startsWith("/admin");
 
+  // Keep browser Back navigation inside the Admin Dashboard.
+  useEffect(() => {
+    if (!isAdminArea || !isAdmin) return;
+
+    const keepAdminDashboard = () => {
+      navigate("/admin");
+    };
+
+    window.addEventListener("popstate", keepAdminDashboard);
+
+    return () => {
+      window.removeEventListener("popstate", keepAdminDashboard);
+    };
+  }, [isAdminArea, isAdmin, navigate]);
+
   useEffect(() => {
     try { localStorage.setItem("shafi-theme", theme); } catch {}
   }, [theme]);
@@ -52,6 +67,11 @@ export default function Layout() {
   }
 
   function goBack() {
+    if (isAdminArea) {
+      if (location.pathname !== "/admin") navigate("/admin");
+      return;
+    }
+
     if (window.history.state?.idx > 0) navigate(-1);
     else navigate(isAdmin ? "/admin" : user ? "/account" : "/");
   }

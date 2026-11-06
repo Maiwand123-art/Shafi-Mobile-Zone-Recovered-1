@@ -1822,3 +1822,212 @@ body {
     transition: none !important;
   }
 }
+
+/* Store Capital — Premium Liquid Glass */
+.admin-content .capital-panel {
+  margin-bottom: 22px;
+  padding: clamp(18px, 2.5vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface-raised);
+  box-shadow: var(--ui-shadow);
+}
+
+.capital-heading {
+  margin-bottom: 24px;
+}
+
+.capital-heading h2 {
+  margin: 7px 0;
+  color: var(--text-main);
+  font-size: 22px;
+}
+
+.capital-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, .85fr) minmax(0, 1.5fr);
+  gap: 18px;
+}
+
+.capital-entry,
+.capital-summary-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--surface-soft);
+}
+
+.capital-entry label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.capital-entry label span,
+.capital-summary-card span,
+.capital-summary-card small {
+  color: var(--text-muted);
+}
+
+.capital-entry input {
+  width: 100%;
+  min-height: 46px;
+  margin-bottom: 13px;
+}
+
+.capital-save {
+  width: 100%;
+  justify-content: center;
+}
+
+.capital-message {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.capital-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.capital-summary-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.capital-summary-card strong {
+  color: var(--text-main);
+  font-size: clamp(20px, 2.2vw, 29px);
+  overflow-wrap: anywhere;
+}
+
+.capital-summary-card small {
+  font-size: 11px;
+}
+
+.capital-total-card {
+  border-color: var(--accent);
+  background: var(--surface-raised);
+}
+
+@media (max-width: 760px) {
+  .capital-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .capital-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Admin Mobiles Search - precise responsive layout */
+.admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) auto auto;
+  align-items: end;
+  gap: 14px;
+  min-width: 0;
+}
+
+.admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) .field {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  gap: 9px;
+}
+
+.admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) .field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+
+.admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) > button {
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .admin-content .inline-form:has(input[placeholder="Search name, brand or model..."]) > button {
+    width: 100%;
+  }
+}
+
+/* Admin Light Mode - scoped readability */
+.app-shell[data-theme="light"] .admin-content {
+  color: #202638;
+}
+
+.app-shell[data-theme="light"] .admin-content h1,
+.app-shell[data-theme="light"] .admin-content h2,
+.app-shell[data-theme="light"] .admin-content h3,
+.app-shell[data-theme="light"] .admin-content h4,
+.app-shell[data-theme="light"] .admin-content p,
+.app-shell[data-theme="light"] .admin-content label,
+.app-shell[data-theme="light"] .admin-content th,
+.app-shell[data-theme="light"] .admin-content td,
+.app-shell[data-theme="light"] .admin-content .field span {
+  color: #202638;
+}
+
+.app-shell[data-theme="light"] .admin-content .muted,
+.app-shell[data-theme="light"] .admin-content small,
+.app-shell[data-theme="light"] .admin-content .eyebrow,
+.app-shell[data-theme="light"] .admin-content .cell-sub {
+  color: #667085;
+}
+
+.app-shell[data-theme="light"] .admin-content .glass,
+.app-shell[data-theme="light"] .admin-content .panel,
+.app-shell[data-theme="light"] .admin-content .stat-card,
+.app-shell[data-theme="light"] .admin-content .capital-panel,
+.app-shell[data-theme="light"] .admin-content .capital-entry,
+.app-shell[data-theme="light"] .admin-content .capital-summary-card {
+  color: #202638;
+  background: rgba(255, 255, 255, .94);
+  border-color: #dce1eb;
+}
+
+.app-shell[data-theme="light"] .admin-content input,
+.app-shell[data-theme="light"] .admin-content textarea,
+.app-shell[data-theme="light"] .admin-content select {
+  color: #202638;
+  background: #fff;
+  border-color: #d5dbe6;
+}
+
+.app-shell[data-theme="light"] .admin-content input::placeholder,
+.app-shell[data-theme="light"] .admin-content textarea::placeholder {
+  color: #7a8496;
+  opacity: 1;
+}
+
+.app-shell[data-theme="light"] .admin-content .table-wrap {
+  background: #fff;
+  border-color: #dce1eb;
+}
+
+.app-shell[data-theme="light"] .admin-content th {
+  color: #202638;
+  background: #edf1f7;
+}
+
+.app-shell[data-theme="light"] .admin-content td {
+  color: #30394b;
+  border-color: #e5e9f0;
+}

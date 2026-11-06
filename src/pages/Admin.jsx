@@ -260,51 +260,52 @@ export function AdminHome() {
 
       {error && <p className="error">{error}</p>}
 
-      <div className="glass panel" style={{ marginBottom: 20 }}>
-        <h2>Store Capital</h2>
-        <p className="muted">Enter your actual store capital. You can edit it whenever needed.</p>
-
-        <div className="form-group" style={{ maxWidth: 420 }}>
-          <label htmlFor="general-capital">General Capital (AFN)</label>
-          <input
-            id="general-capital"
-            type="number"
-            min="0"
-            step="0.01"
-            placeholder="Enter your capital"
-            value={capitalInput}
-            onChange={(e) => setCapitalInput(e.target.value)}
-          />
+      <section className="capital-panel glass">
+        <div className="capital-heading">
+          <div>
+            <span className="eyebrow">FINANCIAL OVERVIEW</span>
+            <h2>Store Capital</h2>
+            <p className="muted">Manage your store's general capital and total capital including customer loans.</p>
+          </div>
         </div>
 
-        <div className="quick-links" style={{ marginTop: 12 }}>
-          <button
-            type="button"
-            className="button"
-            onClick={saveCapital}
-            disabled={capitalSaving}
-          >
-            {capitalSaving ? "Saving..." : capitalSaved ? "Update Capital" : "Save Capital"}
-          </button>
-          <span className="muted">
-            Current Capital: {capitalSaved ? `${capitalAmount.toLocaleString()} AFN` : "Not set"}
-          </span>
-        </div>
+        <div className="capital-layout">
+          <div className="capital-entry">
+            <label htmlFor="general-capital">General Capital <span>(AFN)</span></label>
+            <input
+              id="general-capital"
+              type="number"
+              min="0"
+              step="0.01"
+              placeholder="Enter your capital"
+              value={capitalInput}
+              onChange={(e) => setCapitalInput(e.target.value)}
+            />
+            <button
+              type="button"
+              className="button capital-save"
+              onClick={saveCapital}
+              disabled={capitalSaving}
+            >
+              {capitalSaving ? "Saving..." : capitalSaved ? "Update Capital" : "Save Capital"}
+            </button>
+            {capitalMessage && <p className="capital-message">{capitalMessage}</p>}
+          </div>
 
-        {capitalMessage && <p className="muted">{capitalMessage}</p>}
-
-        <div style={{ marginTop: 18 }}>
-          <h3>Capital With Loans</h3>
-          <p className="muted">
-            {capitalSaved
-              ? `${capitalWithLoans.toLocaleString()} AFN`
-              : "Enter and save your General Capital first."}
-          </p>
-          <small className="muted">
-            General Capital + Remaining Customer Loans
-          </small>
+          <div className="capital-summary">
+            <div className="capital-summary-card">
+              <span>General Capital</span>
+              <strong>{capitalSaved ? `${capitalAmount.toLocaleString()} AFN` : "Not set"}</strong>
+              <small>Your saved store investment</small>
+            </div>
+            <div className="capital-summary-card capital-total-card">
+              <span>Capital With Loans</span>
+              <strong>{capitalSaved ? `${capitalWithLoans.toLocaleString()} AFN` : "Not set"}</strong>
+              <small>General Capital + Remaining Customer Loans</small>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <div className="stats-grid">
         <Stat icon={<Smartphone />} label="Available Mobiles" value={stats.available.toLocaleString()} />
@@ -381,12 +382,28 @@ export function AdminMobiles() {
     else load();
   }
 
-  const filtered = items.filter((p) =>
-    [p.name, p.brand, p.model]
-      .join(" ")
-      .toLowerCase()
-      .includes(search.toLowerCase())
-  );
+  const filtered = items.filter((p) => {
+    const term = search.trim().toLowerCase();
+    if (!term) return true;
+
+    return [
+      p.name,
+      p.brand,
+      p.model,
+      p.imei,
+      p.ram,
+      p.storage,
+      p.battery,
+      p.camera,
+      p.display,
+      p.processor,
+      p.location,
+      p.condition,
+      p.description,
+    ].some((value) =>
+      String(value ?? "").toLowerCase().includes(term)
+    );
+  });
 
   function downloadCSV() {
     const columns = ["Name", "Brand", "Model", "Price AFN", "Stock", "Status"];

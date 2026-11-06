@@ -543,8 +543,8 @@ export function MobileEditor({ edit = false }) {
     setNote("");
     try {
       const imei = String(form.imei || "").trim();
-      if ((!edit && !imei) || (imei && !/^\d{15}$/.test(imei))) {
-        throw new Error("Enter a valid 15-digit IMEI.");
+      if (imei && !/^\d+$/.test(imei)) {
+        throw new Error("IMEI must contain numbers only.");
       }
 
       let image_url = form.image_url;
@@ -599,7 +599,7 @@ export function MobileEditor({ edit = false }) {
     ["name", "Mobile name"],
     ["brand", "Brand"],
     ["model", "Model"],
-    ["imei", "IMEI (15 digits)"],
+    ["imei", "IMEI (Optional)"],
     ["price", "Price (AFN)"],
     ["ram", "RAM"],
     ["storage", "Storage"],
@@ -621,14 +621,14 @@ export function MobileEditor({ edit = false }) {
             <label className="field" key={k}>
               <span>{label}</span>
               <input
-                required={["name", "brand", "price"].includes(k) || (k === "imei" && !edit)}
+                required={["name", "brand", "price"].includes(k)}
                 type={
                   ["price", "stock_quantity"].includes(k) ? "number" : "text"
                 }
-                maxLength={k === "imei" ? 15 : undefined}
+                maxLength={undefined}
                 inputMode={k === "imei" ? "numeric" : undefined}
                 value={form[k] ?? ""}
-                onChange={(e) => change(k, k === "imei" ? e.target.value.replace(/\D/g, "").slice(0, 15) : e.target.value)}
+                onChange={(e) => change(k, k === "imei" ? e.target.value.replace(/\D/g, "") : e.target.value)}
               />
             </label>
           ))}
